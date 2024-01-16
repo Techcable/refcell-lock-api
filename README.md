@@ -1,5 +1,5 @@
-cell-lock-api
-=============
+refcell-lock-api
+=================
 An single-threaded implementation of [lock_api] using a [RefCell].
 
 This is primarily intended to allow abstracting over single-threaded and multi-threaded code.
