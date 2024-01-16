@@ -1,0 +1,28 @@
+[package]
+name = "refcell-lock-api"
+version = "0.1.0"
+edition = "2021"
+description = "A single-threaded implementation of lock_api for RefCell, to alllow abstracting between single-threaded & multi-threaded code"
+readme = "README.md"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/Techcable/refcell-lock-api"
+
+[dependencies]
+lock_api = "0.4.11"
+
+[features]
+default = []
+# Debug the location that borrows occur at.
+#
+# This is not currently enabled by default,
+# because lock_api doesn't include #[track_caller]
+# in the appropriate places.
+#
+# TODO: Once lock_api does #[track_caller], enable this by default on debug mode
+debug-location = []
+# Debug the location that borrows occur at,
+# even in release mode.
+debug-location-release = ["debug-location"]
+
+[build-dependencies]
+cfg_aliases = "0.2.0"
