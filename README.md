@@ -1,4 +1,4 @@
-refcell-lock-api
+refcell-lock-api [![docs.rs](https://img.shields.io/docsrs/refcell-lock-api)](https://docs.rs/refcell-lock-api) [![crates.io](https://img.shields.io/crates/v/refcell-lock-api)](https://crates.io/crates/)
 =================
 An single-threaded implementation of [lock_api] using a [RefCell].
 
